@@ -1,0 +1,6 @@
+flask==2.3.3
+requests==2.31.0
+connexion==2.14.2
+swagger-ui-bundle==4.15.5
+PyYAML==6.0.1
+apscheduler==3.10.4
