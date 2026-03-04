@@ -8,11 +8,11 @@ from kafka import KafkaConsumer
 from flask_cors import CORS
 
 # Load configuration
-with open('app.conf.yaml', 'r') as f:
+with open('app_conf.yaml', 'r') as f:
     CONFIG = yaml.safe_load(f)
 
 # Load logging configuration
-with open('log.conf.yaml', 'r') as f:
+with open('log_conf.yaml', 'r') as f:
     log_config = yaml.safe_load(f.read())
     logging.config.dictConfig(log_config)
 
@@ -158,7 +158,7 @@ CORS(app.app)
 
 # Add API with base path
 app.add_api(
-    'openapi.yml',
+    'openapi.yaml',
     base_path='/analyzer',
     strict_validation=True,
     validate_responses=True

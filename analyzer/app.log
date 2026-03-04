@@ -4822,3 +4822,531 @@
 2026-02-18 12:41:35,458 - basicLogger - INFO -  STORED: Error reading (trace_id: 09eea5a8-6f4d-4e76-9179-3c523eae5f45, server: server-881, code: 804)
 2026-02-18 12:41:35,507 - basicLogger - INFO -  RECEIVED FROM KAFKA: error_metric (trace: ad636e38-43bf-42fc-a843-754c4c88b81b, server: server-881)
 2026-02-18 12:41:35,668 - basicLogger - INFO -  STORED: Error reading (trace_id: ad636e38-43bf-42fc-a843-754c4c88b81b, server: server-881, code: 746)
+2026-03-04 01:06:23,153 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:06:25,154 - basicLogger - ERROR - Error retrieving statistics: NoBrokersAvailable
+2026-03-04 01:06:25,163 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 01:06:27,165 - basicLogger - ERROR - Error retrieving performance event: NoBrokersAvailable
+2026-03-04 01:06:27,174 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 01:06:29,176 - basicLogger - ERROR - Error retrieving error event: NoBrokersAvailable
+2026-03-04 01:06:29,185 - basicLogger - INFO - Request for performance event at index 999
+2026-03-04 01:06:31,187 - basicLogger - ERROR - Error retrieving performance event: NoBrokersAvailable
+2026-03-04 01:13:26,485 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:13:28,486 - basicLogger - ERROR - Error retrieving statistics: NoBrokersAvailable
+2026-03-04 01:13:28,496 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 01:13:30,497 - basicLogger - ERROR - Error retrieving performance event: NoBrokersAvailable
+2026-03-04 01:13:30,507 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 01:13:32,508 - basicLogger - ERROR - Error retrieving error event: NoBrokersAvailable
+2026-03-04 01:13:32,518 - basicLogger - INFO - Request for performance event at index 999
+2026-03-04 01:13:34,519 - basicLogger - ERROR - Error retrieving performance event: NoBrokersAvailable
+2026-03-04 01:50:11,592 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:50:12,599 - basicLogger - INFO - Statistics: {'num_performance_events': 0, 'num_error_events': 0}
+2026-03-04 01:50:12,609 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 01:50:13,614 - basicLogger - ERROR - No performance event found at index 0
+2026-03-04 01:54:38,413 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:54:39,426 - basicLogger - INFO - Statistics: {'num_performance_events': 1, 'num_error_events': 0}
+2026-03-04 01:54:48,909 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 01:54:48,921 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 01:55:08,756 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:55:09,766 - basicLogger - INFO - Statistics: {'num_performance_events': 1, 'num_error_events': 1}
+2026-03-04 01:55:09,776 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 01:55:09,786 - basicLogger - INFO - Found error event at index 0
+2026-03-04 01:58:18,699 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 01:58:18,712 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 01:58:18,747 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 01:58:18,761 - basicLogger - INFO - Found error event at index 0
+2026-03-04 01:58:18,793 - basicLogger - INFO - Request for event statistics
+2026-03-04 01:58:19,807 - basicLogger - INFO - Statistics: {'num_performance_events': 1, 'num_error_events': 1}
+2026-03-04 02:00:34,639 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:00:35,659 - basicLogger - INFO - Statistics: {'num_performance_events': 6, 'num_error_events': 4}
+2026-03-04 02:00:35,675 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:00:35,708 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:00:35,724 - basicLogger - INFO - Request for performance event at index 4
+2026-03-04 02:00:35,739 - basicLogger - INFO - Found performance event at index 4
+2026-03-04 02:00:35,767 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:00:35,780 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:00:35,814 - basicLogger - INFO - Request for error event at index 2
+2026-03-04 02:00:35,827 - basicLogger - INFO - Found error event at index 2
+2026-03-04 02:00:35,858 - basicLogger - INFO - Request for performance event at index 999
+2026-03-04 02:00:36,876 - basicLogger - ERROR - No performance event found at index 999
+2026-03-04 02:00:36,893 - basicLogger - INFO - Request for error event at index 999
+2026-03-04 02:00:37,906 - basicLogger - ERROR - No error event found at index 999
+2026-03-04 02:23:48,673 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:48,674 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:48,954 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:49,847 - basicLogger - INFO - Statistics: {'num_performance_events': 15, 'num_error_events': 10}
+2026-03-04 02:23:49,847 - basicLogger - INFO - Statistics: {'num_performance_events': 15, 'num_error_events': 10}
+2026-03-04 02:23:49,903 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:49,905 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:49,922 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:49,925 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:49,969 - basicLogger - INFO - Statistics: {'num_performance_events': 15, 'num_error_events': 10}
+2026-03-04 02:23:49,979 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:49,980 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:49,997 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:50,001 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:50,020 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:50,033 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:50,084 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:50,096 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:50,182 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:50,183 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:50,265 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:51,217 - basicLogger - INFO - Statistics: {'num_performance_events': 24, 'num_error_events': 16}
+2026-03-04 02:23:51,217 - basicLogger - INFO - Statistics: {'num_performance_events': 24, 'num_error_events': 16}
+2026-03-04 02:23:51,272 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:51,273 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:51,279 - basicLogger - INFO - Statistics: {'num_performance_events': 24, 'num_error_events': 16}
+2026-03-04 02:23:51,296 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:51,301 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:51,334 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:51,347 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:51,354 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:51,358 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:51,371 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:51,379 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:51,398 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:51,410 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:51,548 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:51,551 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:51,581 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:52,572 - basicLogger - INFO - Statistics: {'num_performance_events': 33, 'num_error_events': 22}
+2026-03-04 02:23:52,580 - basicLogger - INFO - Statistics: {'num_performance_events': 33, 'num_error_events': 22}
+2026-03-04 02:23:52,594 - basicLogger - INFO - Statistics: {'num_performance_events': 33, 'num_error_events': 22}
+2026-03-04 02:23:52,626 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:52,631 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:52,646 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:52,648 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:52,662 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:52,672 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:52,701 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:52,716 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:52,718 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:52,727 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:52,740 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:52,751 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:52,891 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:52,914 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:52,920 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:23:53,907 - basicLogger - INFO - Statistics: {'num_performance_events': 42, 'num_error_events': 28}
+2026-03-04 02:23:53,933 - basicLogger - INFO - Statistics: {'num_performance_events': 42, 'num_error_events': 28}
+2026-03-04 02:23:53,945 - basicLogger - INFO - Statistics: {'num_performance_events': 42, 'num_error_events': 28}
+2026-03-04 02:23:53,960 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:53,974 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:53,987 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:54,003 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:54,005 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:23:54,023 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:23:54,029 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:54,047 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:54,060 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:54,076 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:23:54,079 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:23:54,095 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:26,426 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:26,762 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:27,099 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:27,994 - basicLogger - INFO - Statistics: {'num_performance_events': 51, 'num_error_events': 34}
+2026-03-04 02:24:27,996 - basicLogger - INFO - Statistics: {'num_performance_events': 51, 'num_error_events': 34}
+2026-03-04 02:24:28,049 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:28,050 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:28,083 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:28,087 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:28,117 - basicLogger - INFO - Statistics: {'num_performance_events': 51, 'num_error_events': 34}
+2026-03-04 02:24:28,141 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:28,141 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:28,163 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:28,173 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:28,175 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:28,192 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:28,245 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:28,262 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:28,347 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:28,349 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:28,435 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:29,387 - basicLogger - INFO - Statistics: {'num_performance_events': 60, 'num_error_events': 40}
+2026-03-04 02:24:29,388 - basicLogger - INFO - Statistics: {'num_performance_events': 60, 'num_error_events': 40}
+2026-03-04 02:24:29,442 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:29,443 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:29,465 - basicLogger - INFO - Statistics: {'num_performance_events': 60, 'num_error_events': 40}
+2026-03-04 02:24:29,498 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:29,512 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:29,526 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:29,544 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:29,554 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:29,570 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:29,575 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:29,599 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:29,601 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:29,620 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:29,747 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:29,768 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:29,793 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:30,766 - basicLogger - INFO - Statistics: {'num_performance_events': 69, 'num_error_events': 46}
+2026-03-04 02:24:30,794 - basicLogger - INFO - Statistics: {'num_performance_events': 69, 'num_error_events': 46}
+2026-03-04 02:24:30,813 - basicLogger - INFO - Statistics: {'num_performance_events': 69, 'num_error_events': 46}
+2026-03-04 02:24:30,821 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:30,839 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:30,847 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:30,866 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:30,868 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:30,887 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:30,900 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:30,920 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:30,922 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:30,945 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:30,947 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:30,971 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:31,093 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:31,118 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:31,142 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:32,115 - basicLogger - INFO - Statistics: {'num_performance_events': 78, 'num_error_events': 52}
+2026-03-04 02:24:32,141 - basicLogger - INFO - Statistics: {'num_performance_events': 78, 'num_error_events': 52}
+2026-03-04 02:24:32,164 - basicLogger - INFO - Statistics: {'num_performance_events': 78, 'num_error_events': 52}
+2026-03-04 02:24:32,168 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:32,188 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:32,196 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:32,217 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:32,219 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:32,240 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:32,242 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:32,266 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:32,273 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:32,294 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:32,296 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:32,316 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:39,804 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:40,140 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:40,479 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:41,376 - basicLogger - INFO - Statistics: {'num_performance_events': 87, 'num_error_events': 58}
+2026-03-04 02:24:41,376 - basicLogger - INFO - Statistics: {'num_performance_events': 87, 'num_error_events': 58}
+2026-03-04 02:24:41,435 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:41,437 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:41,465 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:41,482 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:41,503 - basicLogger - INFO - Statistics: {'num_performance_events': 87, 'num_error_events': 58}
+2026-03-04 02:24:41,536 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:41,537 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:41,564 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:41,572 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:41,584 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:41,608 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:41,665 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:41,688 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:41,761 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:41,762 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:41,862 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:42,816 - basicLogger - INFO - Statistics: {'num_performance_events': 96, 'num_error_events': 64}
+2026-03-04 02:24:42,819 - basicLogger - INFO - Statistics: {'num_performance_events': 96, 'num_error_events': 64}
+2026-03-04 02:24:42,871 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:42,873 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:42,914 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:42,919 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:42,919 - basicLogger - INFO - Statistics: {'num_performance_events': 96, 'num_error_events': 64}
+2026-03-04 02:24:42,971 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:42,972 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:42,975 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:43,007 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:43,032 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:43,046 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:43,100 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:43,127 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:43,191 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:43,221 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:43,299 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:44,254 - basicLogger - INFO - Statistics: {'num_performance_events': 105, 'num_error_events': 70}
+2026-03-04 02:24:44,256 - basicLogger - INFO - Statistics: {'num_performance_events': 105, 'num_error_events': 70}
+2026-03-04 02:24:44,310 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:44,311 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:44,355 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:44,361 - basicLogger - INFO - Statistics: {'num_performance_events': 105, 'num_error_events': 70}
+2026-03-04 02:24:44,364 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:44,418 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:44,419 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:44,423 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:44,456 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:44,477 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:44,497 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:44,553 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:44,583 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:44,644 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:44,674 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:44,752 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:45,713 - basicLogger - INFO - Statistics: {'num_performance_events': 114, 'num_error_events': 76}
+2026-03-04 02:24:45,721 - basicLogger - INFO - Statistics: {'num_performance_events': 114, 'num_error_events': 76}
+2026-03-04 02:24:45,769 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:45,774 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:45,783 - basicLogger - INFO - Statistics: {'num_performance_events': 114, 'num_error_events': 76}
+2026-03-04 02:24:45,808 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:45,831 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:45,860 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:45,890 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:45,892 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:45,893 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:45,926 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:45,951 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:45,951 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:45,979 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:54,382 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:54,720 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:55,050 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:55,947 - basicLogger - INFO - Statistics: {'num_performance_events': 123, 'num_error_events': 82}
+2026-03-04 02:24:55,948 - basicLogger - INFO - Statistics: {'num_performance_events': 123, 'num_error_events': 82}
+2026-03-04 02:24:56,002 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:56,003 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:56,055 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:56,060 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:56,079 - basicLogger - INFO - Statistics: {'num_performance_events': 123, 'num_error_events': 82}
+2026-03-04 02:24:56,114 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:56,115 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:56,138 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:56,149 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:56,173 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:56,202 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:56,258 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:56,288 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:56,353 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:56,354 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:56,463 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:57,455 - basicLogger - INFO - Statistics: {'num_performance_events': 132, 'num_error_events': 88}
+2026-03-04 02:24:57,457 - basicLogger - INFO - Statistics: {'num_performance_events': 132, 'num_error_events': 88}
+2026-03-04 02:24:57,493 - basicLogger - INFO - Statistics: {'num_performance_events': 132, 'num_error_events': 88}
+2026-03-04 02:24:57,509 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:57,511 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:57,545 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:57,547 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:57,573 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:57,602 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:57,623 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:57,628 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:57,677 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:57,691 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:57,691 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:57,724 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:57,869 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:57,870 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:57,930 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:58,929 - basicLogger - INFO - Statistics: {'num_performance_events': 141, 'num_error_events': 94}
+2026-03-04 02:24:58,935 - basicLogger - INFO - Statistics: {'num_performance_events': 141, 'num_error_events': 94}
+2026-03-04 02:24:58,970 - basicLogger - INFO - Statistics: {'num_performance_events': 141, 'num_error_events': 94}
+2026-03-04 02:24:58,984 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:58,987 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:59,022 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:59,024 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:24:59,051 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:59,086 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:24:59,088 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:59,112 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:59,125 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:59,149 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:24:59,159 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:59,194 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:24:59,297 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:59,335 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:24:59,371 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:00,337 - basicLogger - INFO - Statistics: {'num_performance_events': 150, 'num_error_events': 100}
+2026-03-04 02:25:00,370 - basicLogger - INFO - Statistics: {'num_performance_events': 150, 'num_error_events': 100}
+2026-03-04 02:25:00,389 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:00,423 - basicLogger - INFO - Statistics: {'num_performance_events': 150, 'num_error_events': 100}
+2026-03-04 02:25:00,427 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:00,429 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:00,469 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:00,484 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:00,490 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:00,523 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:00,527 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:00,556 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:00,588 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:00,589 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:00,622 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:15,498 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:15,832 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:16,167 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:17,060 - basicLogger - INFO - Statistics: {'num_performance_events': 159, 'num_error_events': 106}
+2026-03-04 02:25:17,062 - basicLogger - INFO - Statistics: {'num_performance_events': 159, 'num_error_events': 106}
+2026-03-04 02:25:17,116 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:17,117 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:17,156 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:17,185 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:17,205 - basicLogger - INFO - Statistics: {'num_performance_events': 159, 'num_error_events': 106}
+2026-03-04 02:25:17,221 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:17,249 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:17,258 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:17,261 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:17,299 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:17,332 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:17,385 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:17,423 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:17,428 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:17,471 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:17,594 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:18,543 - basicLogger - INFO - Statistics: {'num_performance_events': 168, 'num_error_events': 112}
+2026-03-04 02:25:18,545 - basicLogger - INFO - Statistics: {'num_performance_events': 168, 'num_error_events': 112}
+2026-03-04 02:25:18,596 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:18,599 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:18,641 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:18,642 - basicLogger - INFO - Statistics: {'num_performance_events': 168, 'num_error_events': 112}
+2026-03-04 02:25:18,677 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:18,695 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:18,701 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:18,743 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:18,752 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:18,791 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:18,823 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:18,842 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:18,880 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:18,972 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:18,998 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:19,060 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:20,019 - basicLogger - INFO - Statistics: {'num_performance_events': 177, 'num_error_events': 118}
+2026-03-04 02:25:20,059 - basicLogger - INFO - Statistics: {'num_performance_events': 177, 'num_error_events': 118}
+2026-03-04 02:25:20,073 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:20,114 - basicLogger - INFO - Statistics: {'num_performance_events': 177, 'num_error_events': 118}
+2026-03-04 02:25:20,114 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:20,116 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:20,156 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:20,170 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:20,171 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:20,211 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:20,217 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:20,253 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:20,292 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:20,305 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:20,346 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:20,427 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:20,463 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:20,518 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:25:21,476 - basicLogger - INFO - Statistics: {'num_performance_events': 186, 'num_error_events': 124}
+2026-03-04 02:25:21,517 - basicLogger - INFO - Statistics: {'num_performance_events': 186, 'num_error_events': 124}
+2026-03-04 02:25:21,530 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:21,569 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:21,571 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:21,605 - basicLogger - INFO - Statistics: {'num_performance_events': 186, 'num_error_events': 124}
+2026-03-04 02:25:21,614 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:21,626 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:21,664 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:21,666 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:25:21,668 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:21,713 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:25:21,746 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:25:21,772 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:25:21,811 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:27:58,893 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:27:59,222 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:27:59,561 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:00,456 - basicLogger - INFO - Statistics: {'num_performance_events': 195, 'num_error_events': 130}
+2026-03-04 02:28:00,458 - basicLogger - INFO - Statistics: {'num_performance_events': 195, 'num_error_events': 130}
+2026-03-04 02:28:00,511 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:00,511 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:00,558 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:00,593 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:00,605 - basicLogger - INFO - Statistics: {'num_performance_events': 195, 'num_error_events': 130}
+2026-03-04 02:28:00,645 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:00,645 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:00,659 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:00,783 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:00,836 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:01,743 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:01,745 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:01,800 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:01,801 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:01,847 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:01,885 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:01,885 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:01,913 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:01,944 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:01,952 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:02,008 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:02,075 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:02,963 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:03,143 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:04,092 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:04,093 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:04,263 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:04,319 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:05,269 - basicLogger - INFO - Statistics: {'num_performance_events': 204, 'num_error_events': 136}
+2026-03-04 02:28:05,312 - basicLogger - INFO - Statistics: {'num_performance_events': 204, 'num_error_events': 136}
+2026-03-04 02:28:05,322 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:05,363 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:05,364 - basicLogger - INFO - Statistics: {'num_performance_events': 204, 'num_error_events': 136}
+2026-03-04 02:28:05,367 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:05,410 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:05,418 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:05,419 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:05,467 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:05,505 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:05,562 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:06,466 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:06,518 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:06,557 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:06,565 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:06,606 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:06,617 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:06,618 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:06,662 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:06,681 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:06,756 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:06,762 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:06,809 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:07,709 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:07,882 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:08,831 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:08,832 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:09,013 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:09,014 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:09,961 - basicLogger - INFO - Statistics: {'num_performance_events': 213, 'num_error_events': 142}
+2026-03-04 02:28:10,015 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:10,057 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:10,066 - basicLogger - INFO - Statistics: {'num_performance_events': 213, 'num_error_events': 142}
+2026-03-04 02:28:10,104 - basicLogger - INFO - Statistics: {'num_performance_events': 213, 'num_error_events': 142}
+2026-03-04 02:28:10,111 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:10,117 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:10,168 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:10,205 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:10,245 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:10,262 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:10,304 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:11,162 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:11,214 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:11,258 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:11,308 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:11,312 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:11,370 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:11,372 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:11,432 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:11,439 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:11,481 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:11,484 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:11,535 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:12,387 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:12,570 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:13,518 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:13,519 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:13,706 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:13,709 - basicLogger - INFO - Request for event statistics
+2026-03-04 02:28:14,654 - basicLogger - INFO - Statistics: {'num_performance_events': 222, 'num_error_events': 148}
+2026-03-04 02:28:14,706 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:14,751 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:14,760 - basicLogger - INFO - Statistics: {'num_performance_events': 222, 'num_error_events': 148}
+2026-03-04 02:28:14,806 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:14,808 - basicLogger - INFO - Statistics: {'num_performance_events': 222, 'num_error_events': 148}
+2026-03-04 02:28:14,813 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:14,867 - basicLogger - INFO - Request for performance event at index 0
+2026-03-04 02:28:14,908 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:14,954 - basicLogger - INFO - Found performance event at index 0
+2026-03-04 02:28:14,965 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:15,012 - basicLogger - INFO - Request for performance event at index 15000
+2026-03-04 02:28:15,865 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:15,919 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:15,963 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:16,010 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:16,016 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:16,064 - basicLogger - ERROR - No performance event found at index 15000
+2026-03-04 02:28:16,066 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:16,110 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:16,118 - basicLogger - INFO - Request for error event at index 0
+2026-03-04 02:28:16,161 - basicLogger - INFO - Found error event at index 0
+2026-03-04 02:28:16,163 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:16,216 - basicLogger - INFO - Request for error event at index 15000
+2026-03-04 02:28:17,064 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:17,209 - basicLogger - ERROR - No error event found at index 15000
+2026-03-04 02:28:17,262 - basicLogger - ERROR - No error event found at index 15000

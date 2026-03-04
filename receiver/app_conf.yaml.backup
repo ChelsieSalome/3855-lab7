@@ -1,0 +1,6 @@
+version: 1
+
+events:
+  hostname: kafka-mysql.centralus.cloudapp.azure.com
+  port: 9092
+  topic: events

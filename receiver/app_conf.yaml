@@ -1,6 +1,4 @@
-version: 1
-
 events:
-  hostname: kafka-mysql.centralus.cloudapp.azure.com
-  port: 9092
+  hostname: kafka    # ← Must be 'kafka' (Docker service name)
+  port: 29092        # ← Must be 29092 (internal Docker port)
   topic: events

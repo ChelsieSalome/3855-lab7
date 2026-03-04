@@ -132,53 +132,70 @@ components:
     PerformanceMetric:
       type: object
       required:
+        - trace_id
         - server_id
-        - response_time
-        - cpu_usage
-        - memory_usage
-        - timestamp
+        - cpu
+        - memory
+        - disk_io
+        - reporting_timestamp
       properties:
+        trace_id:
+          type: string
+          example: "8707e0f6-40d4-43b2-9338-a8767cc142dc"
         server_id:
           type: string
           example: "server-001"
-        response_time:
+        cpu:
           type: number
           format: float
-          example: 123.45
-        cpu_usage:
+          example: 65.5
+        memory:
           type: number
           format: float
-          example: 45.2
-        memory_usage:
+          example: 55.2
+        disk_io:
           type: number
           format: float
-          example: 60.5
-        timestamp:
+          example: 120.8
+        reporting_timestamp:
           type: string
           format: date-time
-          example: "2026-03-03T10:15:30Z"
+          example: "2026-03-04T02:00:00Z"
 
     ErrorMetric:
       type: object
       required:
+        - trace_id
         - server_id
         - error_code
+        - severity_level
+        - avg_response_time
         - error_message
-        - timestamp
+        - reporting_timestamp
       properties:
+        trace_id:
+          type: string
+          example: "8707e0f6-40d4-43b2-9338-a8767cc142dc"
         server_id:
           type: string
           example: "server-001"
         error_code:
           type: string
           example: "500"
+        severity_level:
+          type: integer
+          example: 3
+        avg_response_time:
+          type: number
+          format: float
+          example: 1500.5
         error_message:
           type: string
-          example: "Internal server error"
-        timestamp:
+          example: "Database timeout"
+        reporting_timestamp:
           type: string
           format: date-time
-          example: "2026-03-03T10:15:30Z"
+          example: "2026-03-04T02:05:00Z"
 
     Stats:
       type: object
