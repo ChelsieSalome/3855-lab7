@@ -252,4 +252,4 @@ if __name__ == "__main__":
     
     setup_kafka_thread()
     
-    app.run(port=8091)
+    app.run(host="0.0.0.0", port=8091)

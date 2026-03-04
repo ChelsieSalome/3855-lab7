@@ -6,7 +6,9 @@ import logging
 import logging.config
 import json
 import datetime
+import time
 from kafka import KafkaProducer
+from kafka.errors import NoBrokersAvailable
 
 # LOAD CONFIGURATION
 with open('app_conf.yaml', 'r') as f:
@@ -26,16 +28,27 @@ logger.info("Configuration loaded - Kafka DEBUG logs suppressed")
 KAFKA_SERVER = f"{app_config['events']['hostname']}:{app_config['events']['port']}"
 KAFKA_TOPIC = app_config['events']['topic']
 
-# Initialize Kafka Producer
-try:
-    producer = KafkaProducer(
-        bootstrap_servers=KAFKA_SERVER,
-        value_serializer=lambda v: json.dumps(v).encode('utf-8')
-    )
-    logger.info(f"Connected to Kafka at {KAFKA_SERVER}")
-except Exception as e:
-    logger.error(f"Failed to connect to Kafka: {e}")
-    raise
+# Initialize Kafka Producer with retry logic
+def get_kafka_producer():
+    max_retries = 10
+    retry_delay = 5  # seconds
+
+    for attempt in range(max_retries):
+        try:
+            p = KafkaProducer(
+                bootstrap_servers=KAFKA_SERVER,
+                value_serializer=lambda v: json.dumps(v).encode('utf-8')
+            )
+            logger.info(f"Connected to Kafka at {KAFKA_SERVER}")
+            return p
+        except NoBrokersAvailable:
+            logger.warning(f"Kafka not ready. Attempt {attempt + 1}/{max_retries}. Retrying in {retry_delay}s...")
+            time.sleep(retry_delay)
+
+    logger.error("Could not connect to Kafka after maximum retries.")
+    raise Exception("Kafka connection failed after max retries.")
+
+producer = get_kafka_producer()
 
 
 def report_performance_metrics(body):

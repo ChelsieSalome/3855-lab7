@@ -3,13 +3,13 @@ version: 1
 datastore:
   user: chelsie
   password: acit3855-2026
-  hostname: kafka-mysql.centralus.cloudapp.azure.com
+  hostname: db
   port: 3306
   db: monitoring
 
 events:
-  hostname: kafka-mysql.centralus.cloudapp.azure.com
-  port: 9092
+  hostname: kafka
+  port: 29092
   topic: events
 
 service:

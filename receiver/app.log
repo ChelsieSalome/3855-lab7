@@ -4817,3 +4817,5 @@
 2026-03-04 02:28:13,645 - basicLogger - INFO - SENT TO KAFKA: Error metric (trace: 9b3b1ae8-0fcf-442a-98d1-b5f54da03203, code: 223)
 2026-03-04 02:28:13,652 - basicLogger - INFO - SENT TO KAFKA: Error metric (trace: daf5d46a-6c60-4af5-b905-b8f428ee6dde, code: 737)
 2026-03-04 02:28:13,652 - basicLogger - INFO - SENT TO KAFKA: Error metric (trace: 0ce720b3-5119-4a8b-87a3-78bf4019f9b7, code: 315)
+2026-03-04 21:23:33,812 - basicLogger - INFO - Configuration loaded - Kafka DEBUG logs suppressed
+2026-03-04 21:23:33,864 - basicLogger - ERROR - Failed to connect to Kafka: NoBrokersAvailable

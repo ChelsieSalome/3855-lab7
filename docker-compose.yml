@@ -1,85 +1,125 @@
-version: '3.8'
-
 services:
+
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
     networks:
       - app-network
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
 
   kafka:
     image: wurstmeister/kafka
     ports:
       - "9092:9092"
     environment:
-      KAFKA_CREATE_TOPICS: "events:1:1"
-      KAFKA_LISTENERS: INSIDE://:29092,OUTSIDE://:9092
-      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:29092,OUTSIDE://0.0.0.0:9092
       KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:29092,OUTSIDE://localhost:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_CREATE_TOPICS: "events:1:1"
     depends_on:
-      - zookeeper
+      zookeeper:
+        condition: service_healthy
     networks:
       - app-network
+    healthcheck:
+      test: ["CMD", "kafka-topics.sh", "--list", "--bootstrap-server", "localhost:9092"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
 
   db:
     image: mysql
-    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: events
+      MYSQL_USER: chelsie
+      MYSQL_PASSWORD: acit3855-2026
+      MYSQL_DATABASE: monitoring
+      MYSQL_ROOT_PASSWORD: rootpassword
     ports:
       - "3306:3306"
-    networks:
-      - app-network
-
-  receiver-service:
-    build: ./receiver
-    ports:
-      - "8080:8080"
     volumes:
-      - ./receiver:/app
-    depends_on:
-      - kafka
+      - mysql-data:/var/lib/mysql
     networks:
       - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
 
   storage-service:
     build: ./storage-mysql
     ports:
       - "8091:8091"
-    volumes:
-      - ./storage-mysql:/app
     depends_on:
-      - kafka
-      - db
+      db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
     networks:
       - app-network
+    volumes:
+      - ./storage-mysql/app_conf.yaml:/app/app_conf.yaml
+      - ./storage-mysql/log_conf.yaml:/app/log_conf.yaml
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8091/monitoring/performance?start_timestamp=2020-01-01T00:00:00Z&end_timestamp=2020-01-02T00:00:00Z')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  receiver-service:
+    build: ./receiver
+    ports:
+      - "8080:8080"
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - app-network
+    volumes:
+      - ./receiver/app_conf.yaml:/app/app_conf.yaml
+      - ./receiver/log_conf.yaml:/app/log_conf.yaml
 
   processing-service:
     build: ./processing
     ports:
       - "8100:8100"
-    volumes:
-      - ./processing:/app
     depends_on:
-      - storage-service
+      storage-service:
+        condition: service_healthy
     networks:
       - app-network
+    volumes:
+      - ./processing/app_conf.yaml:/app/app_conf.yaml
+      - ./processing/log_conf.yaml:/app/log_conf.yaml
 
   analyzer-service:
     build: ./analyzer
     ports:
       - "5005:5005"
-    volumes:
-      - ./analyzer:/app
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
     networks:
       - app-network
+    volumes:
+      - ./analyzer/app_conf.yaml:/app/app_conf.yaml
+      - ./analyzer/log_conf.yaml:/app/log_conf.yaml
 
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  mysql-data:

@@ -4822,3 +4822,4 @@
 2026-02-18 12:41:35,458 - basicLogger - INFO -  STORED: Error reading (trace_id: 09eea5a8-6f4d-4e76-9179-3c523eae5f45, server: server-881, code: 804)
 2026-02-18 12:41:35,507 - basicLogger - INFO -  RECEIVED FROM KAFKA: error_metric (trace: ad636e38-43bf-42fc-a843-754c4c88b81b, server: server-881)
 2026-02-18 12:41:35,668 - basicLogger - INFO -  STORED: Error reading (trace_id: ad636e38-43bf-42fc-a843-754c4c88b81b, server: server-881, code: 746)
+2026-03-04 21:23:31,949 - basicLogger - INFO - Connecting to database at kafka-mysql.centralus.cloudapp.azure.com:3306/monitoring

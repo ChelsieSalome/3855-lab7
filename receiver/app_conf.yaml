@@ -1,4 +1,9 @@
+version: 1
+
 events:
-  hostname: kafka    # ← Must be 'kafka' (Docker service name)
-  port: 29092        # ← Must be 29092 (internal Docker port)
+  hostname: kafka
+  port: 29092
   topic: events
+
+service:
+  port: 8080
