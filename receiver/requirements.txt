@@ -1,0 +1,5 @@
+connexion[flask,swagger-ui,uvicorn]>=3.0.0
+flask-cors>=4.0.0
+kafka-python>=2.0.2
+PyYAML>=6.0
+requests>=2.31.0

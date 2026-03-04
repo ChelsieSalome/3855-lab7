@@ -1,0 +1,194 @@
+openapi: 3.0.0
+info:
+  description: This API provides event analytics from Kafka queue
+  version: "1.0.0"
+  title: Analyzer API
+  contact:
+    email: slelewambo@my.bcit.ca
+
+servers:
+  - url: /analyzer
+    description: Analyzer API base path
+
+paths:
+  /performance:
+    get:
+      summary: Gets a performance metric event from history
+      operationId: app.get_performance_event
+      description: Gets performance metric event from the Kafka event store
+      parameters:
+        - name: index
+          in: query
+          description: Gets the performance event at the index in the event store
+          required: true
+          schema:
+            type: integer
+            example: 0
+      responses:
+        '200':
+          description: Successfully returned a performance event
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformanceMetric'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /error:
+    get:
+      summary: Gets an error metric event from history
+      operationId: app.get_error_event
+      description: Gets error metric event from the Kafka event store
+      parameters:
+        - name: index
+          in: query
+          description: Gets the error event at the index in the event store
+          required: true
+          schema:
+            type: integer
+            example: 0
+      responses:
+        '200':
+          description: Successfully returned an error event
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMetric'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /stats:
+    get:
+      summary: Gets statistics about events in the queue
+      operationId: app.get_stats
+      description: Returns counts of each event type in the Kafka queue
+      responses:
+        '200':
+          description: Successfully returned statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stats'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /health:
+    get:
+      summary: Health check endpoint
+      operationId: app.health
+      description: Returns service health status
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+
+components:
+  schemas:
+    PerformanceMetric:
+      type: object
+      required:
+        - server_id
+        - response_time
+        - cpu_usage
+        - memory_usage
+        - timestamp
+      properties:
+        server_id:
+          type: string
+          example: "server-001"
+        response_time:
+          type: number
+          format: float
+          example: 123.45
+        cpu_usage:
+          type: number
+          format: float
+          example: 45.2
+        memory_usage:
+          type: number
+          format: float
+          example: 60.5
+        timestamp:
+          type: string
+          format: date-time
+          example: "2026-03-03T10:15:30Z"
+
+    ErrorMetric:
+      type: object
+      required:
+        - server_id
+        - error_code
+        - error_message
+        - timestamp
+      properties:
+        server_id:
+          type: string
+          example: "server-001"
+        error_code:
+          type: string
+          example: "500"
+        error_message:
+          type: string
+          example: "Internal server error"
+        timestamp:
+          type: string
+          format: date-time
+          example: "2026-03-03T10:15:30Z"
+
+    Stats:
+      type: object
+      required:
+        - num_performance_events
+        - num_error_events
+      properties:
+        num_performance_events:
+          type: integer
+          example: 189
+        num_error_events:
+          type: integer
+          example: 213

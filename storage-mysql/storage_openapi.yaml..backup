@@ -1,0 +1,171 @@
+openapi: 3.0.3
+info:
+  description: This API receives system monitoring data from enterprise servers to track performance and errors
+  version: "1.0.0"
+  title: Enterprise System Monitoring API
+  contact:
+    email: lelechelsie@gmail.com
+
+paths:
+  /monitoring/performance:
+    post:
+      summary: Reports a batch of system performance metrics
+      operationId: app.report_performance_metrics
+      description: Adds a batch of CPU, memory, and disk I/O readings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerformanceMetrics'
+      responses:
+        '201':
+          description: batch successfully received
+        '400':
+          description: 'invalid input, object invalid'
+    
+    get:
+      summary: Gets performance readings between timestamps
+      operationId: app.get_performance_readings
+      description: Gets performance readings received over a timespan
+      parameters:
+        - name: start_timestamp
+          in: query
+          description: Start of the timespan
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2026-01-14T10:00:00Z"
+        - name: end_timestamp
+          in: query
+          description: End of the timespan
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2026-01-14T11:00:00Z"
+      responses:
+        '200':
+          description: Successfully returned performance readings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PerformanceMetrics'
+        '400':
+          description: Invalid request parameters
+
+  /monitoring/errors:
+    post:
+      summary: Reports a batch of server error metrics
+      operationId: app.report_error_metrics
+      description: Adds a batch of error codes, severity levels, and average response times
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ErrorMetrics'
+      responses:
+        '201':
+          description: batch successfully received
+        '400':
+          description: 'invalid input, object invalid'
+    
+    get:
+      summary: Gets error readings between timestamps
+      operationId: app.get_error_readings
+      description: Gets error readings received over a timespan
+      parameters:
+        - name: start_timestamp
+          in: query
+          description: Start of the timespan
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2026-01-14T10:00:00Z"
+        - name: end_timestamp
+          in: query
+          description: End of the timespan
+          required: true
+          schema:
+            type: string
+            format: date-time
+            example: "2026-01-14T11:00:00Z"
+      responses:
+        '200':
+          description: Successfully returned error readings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ErrorMetrics'
+        '400':
+          description: Invalid request parameters
+
+components:
+  schemas:
+    PerformanceMetrics:
+      required:
+      - server_id
+      - reporting_timestamp
+      - cpu
+      - memory
+      - disk_io
+      properties:
+        server_id:
+          type: string
+          format: uuid
+          example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+        reporting_timestamp:
+          type: string
+          format: date-time
+          example: "2026-01-14T10:00:00Z"
+        cpu:
+          type: number
+          example: 72.5
+        memory:
+          type: number
+          example: 64.2
+        disk_io:
+          type: number
+          example: 120.5
+      type: object
+
+    ErrorMetrics:
+      required:
+      - server_id
+      - reporting_timestamp
+      - error_code
+      - severity_level
+      - avg_response_time
+      - error_message
+      properties:
+        server_id:
+          type: string
+          format: uuid
+          example: "a12f3c9e-1b23-4c56-9d78-123456789abc"
+        reporting_timestamp:
+          type: string
+          format: date-time
+          example: "2026-01-14T10:00:00Z"
+        error_code:
+          type: string
+          example: "500"
+        severity_level:
+          type: integer
+          description: 1=Low, 5=Critical
+          example: 4
+        avg_response_time:
+          type: number
+          description: average response time in milliseconds
+          example: 1200.5
+        error_message:
+          type: string
+          maxLength: 500
+          example: "Database connection timeout after 30s"
+      type: object
